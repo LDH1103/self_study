@@ -46,9 +46,6 @@ class Db_conn {
     }
 }
 
-// $conn = null;
-// $obj_db_conn = new Db_conn( $conn );
-
 class Db_select {
     private $sql = null;
     private $arr_prepare = null;
@@ -91,8 +88,15 @@ class Db_select {
         return $this->result ;
     }
 }
+// --------------------------------TEST------------------------
+
+// $conn = null;
+// $obj_db_conn = new Db_conn( $conn );
 
 $obj_db_select = new Db_select;
 $arr = $obj_db_select->fnc_sel_board_all();
 var_dump( $arr );
+
+// --------------------------------TEST------------------------
+
 ?>
