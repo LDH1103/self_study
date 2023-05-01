@@ -54,16 +54,22 @@ class Db_select {
     private $result = null;
     private $obj_db_conn = null;
 
+    // ---------------------------------------------------
+    // 함수명	: __construct
+    // 기능		: Db_conn 클래스를 인스턴스화 하여 DB연결 객체를 얻음
+    // 파라미터	: 없음
+    // 리턴값	: 없음
+    // ---------------------------------------------------
     public function __construct() {
         $this->obj_db_conn = new Db_conn( $this->obj_db_conn );
         $this->conn = $this->obj_db_conn->get_param_conn();
     }
-    // ---------------------------------
+    // ---------------------------------------------------
     // 함수명	: fnc_sel_board_all
     // 기능		: board_info의 모든글 조회
     // 파라미터	: 없음
-    // 리턴값	: 없음
-    // ---------------------------------
+    // 리턴값	: Array/String      $this->result/ErrMSG
+    // ---------------------------------------------------
     public function fnc_sel_board_all() {
         $this->sql =
         " SELECT "
