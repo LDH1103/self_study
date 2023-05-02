@@ -1,5 +1,5 @@
 <?php
-//test
+
     // // "Hello, world!"를 출력하는 PHP 코드를 작성하세요.
     // echo "Hello, world!";
 
