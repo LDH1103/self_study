@@ -41,8 +41,12 @@
 			// 2장씩 나눠주고 덱에서 빼기
             array_push( $this->player_card, array_shift( $this->deck ) );
             array_push( $this->player_card, array_shift( $this->deck ) );
-            array_push( $this->dealer_card, array_shift( $this->deck ) );
-            array_push( $this->dealer_card, array_shift( $this->deck ) );
+			// 처음 접속시 딜러의 카드가 4장인경우를 방지하기위해 추가
+			$first_dealer_card = array_shift( $this->deck );
+			array_push( $this->dealer_card, $first_dealer_card );
+			if ( $first_dealer_card !== $this->dealer_card[0] ) {
+				array_push( $this->dealer_card, array_shift( $this->deck ) );
+			}
 			$this->player_score = $this->fnc_calculate_score( $this->player_card );
 			$this->dealer_score = $this->fnc_calculate_score( $this->dealer_card );
 		}
