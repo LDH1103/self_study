@@ -30,13 +30,13 @@
     // shot 버튼을 누를 경우, 탄창의 마지막값을 제거하고 $bullet 변수에 반환함
     if ( isset( $_POST["shot"] ) ) {
         $bullet = array_pop( $chamber );
-        // 총알이 5일경우 게임 오버 메세지 출력후, 리셋버튼 출력 및 세션 종료
+        // 총알이 1일경우 게임 오버 메세지 출력후, 리셋버튼 출력 및 세션 종료
         if ( $bullet === 1 ) {
             echo "<div class='game_over'>게임 오버!</div><br><br>";
             echo "<button type='submit' name='reset' class='btn btn-outline-dark'>reset</button>";
             session_destroy();
         } else { 
-            // 총알이 5가 아닐경우, 메세지와 shot버튼 출력후, 세션에 현재 탄창 상태를 반영함
+            // 총알이 1가 아닐경우, 메세지와 shot버튼 출력후, 세션에 현재 탄창 상태를 반영함
             echo "<div class='msg'>패스!</div>";
             echo "<div class='msg'>남은 탄창 : ".count( $chamber )."</div><br>";
             echo "<button type='submit' name='shot' class='btn btn-outline-dark'>shot</button>";
