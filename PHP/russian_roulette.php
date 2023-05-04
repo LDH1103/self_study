@@ -21,7 +21,7 @@
     }
     // 탄창 배열이 설정되지 않은경우 설정
     if ( !isset( $_SESSION["chamber"] ) ) {
-        $chamber = array( 0, 1, 2, 3, 4, 5 );
+        $chamber = array( 0, 0, 0, 0, 0, 1 );
         shuffle( $chamber );
         $_SESSION["chamber"] = $chamber;
     } else { // 탄창 배열이 설정되어 있는 경우, 세션에 현재 탄창 상태를 반영함
@@ -31,7 +31,7 @@
     if ( isset( $_POST["shot"] ) ) {
         $bullet = array_pop( $chamber );
         // 총알이 5일경우 게임 오버 메세지 출력후, 리셋버튼 출력 및 세션 종료
-        if ( $bullet === 5 ) {
+        if ( $bullet === 1 ) {
             echo "<div class='game_over'>게임 오버!</div><br><br>";
             echo "<button type='submit' name='reset' class='btn btn-outline-dark'>reset</button>";
             session_destroy();
