@@ -1,0 +1,10 @@
+.contents {
+    margin : 60px auto 0 auto;
+    width : 80vw;
+    min-width: 1000px;
+    font-size : 20px;
+    padding : 5px;
+}
+.comment {
+    margin-top : 20px;
+}
