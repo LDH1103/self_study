@@ -9,7 +9,7 @@ class Db_conn {
     // 리턴값	: $this->param_conn
     // ---------------------------------
     public function __construct( &$param_conn ) {
-        $host = "localhost";
+        $host = "118.41.52.8";
         $user = "root";
         $pass = "root506";
         $charset = "utf8mb4";
@@ -24,7 +24,6 @@ class Db_conn {
 
         try
         {
-            echo "db연결 성공\n";
             $this->param_conn = new PDO( $dns, $user, $pass, $pdo_option );
             return $this->param_conn;
         } catch( Exception $e) {   
@@ -88,9 +87,9 @@ class Db_select {
 // $conn = null;
 // $obj_db_conn = new Db_conn( $conn );
 
-$obj_db_select = new Db_select;
-$arr = $obj_db_select->fnc_sel_board_all();
-var_dump( $arr );
+// $obj_db_select = new Db_select;
+// $arr = $obj_db_select->fnc_sel_board_all();
+// var_dump( $arr );
 
 // --------------------------------TEST--------------------------------
 

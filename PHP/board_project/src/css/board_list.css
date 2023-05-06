@@ -1,0 +1,22 @@
+.div_info {
+    margin : 60px auto 0 auto;
+    width : 80vw;
+    min-width: 1000px;
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr 1fr;
+    background-color : #211d1d;
+    color : white;
+    font-size : 20px;
+    padding : 5px;
+}
+.text_cen {
+    text-align : center;
+}
+.div_content{
+    margin : 10px auto;
+    width : 80vw;
+    min-width: 1000px;
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr 1fr;
+    padding : 5px;
+}
