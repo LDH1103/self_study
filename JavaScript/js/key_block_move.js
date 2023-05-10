@@ -63,7 +63,7 @@ function keyUpHandler(e) {
 function drawRect() {
 	ctx.beginPath();
     ctx.rect(rectX, rectY, rectWidth, rectHeight); //--2번째의 Y좌표가 지정이 안 되어 있어서, 위아래 이동이 안됐었음 
-    ctx.strokeStyle = "lightgreen";
+    ctx.strokeStyle = "black";
 
   // 채우기는 도형의 내부를 color나 gradient, img로 채움
   // stroke는 외곽선에 색을 칠함
