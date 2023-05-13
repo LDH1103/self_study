@@ -9,7 +9,7 @@ class Db_conn {
     // 리턴값	: $this->param_conn
     // ---------------------------------
     public function __construct( &$param_conn ) {
-        $host = "118.41.52.8";
+        $host = "localhost";
         $user = "root";
         $pass = "root506";
         $charset = "utf8mb4";
